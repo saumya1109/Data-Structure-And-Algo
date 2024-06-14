@@ -7,6 +7,7 @@ public class EmployeeLinkedList {
     public void addToFront(Employee employee) {
 
         EmployeeNode node = new EmployeeNode(employee);
+        System.out.println( "Head" +head);
         node.setNext(head);
         head = node;
         size++;
