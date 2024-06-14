@@ -9,12 +9,23 @@ public class Main {
         Employee MarySmith = new Employee("Mary", "Smith", 22);
         Employee MikeWilson = new Employee("Mike", "Wilson", 3245);
 
-        EmployeeLinkedList list =  new EmployeeLinkedList();
+
+        EmployeeLinkedList list = new EmployeeLinkedList();
+        System.out.println(list.isEmpty());
         list.addToFront(janeJones);
         list.addToFront(johnDoe);
         list.addToFront(MarySmith);
         list.addToFront(MikeWilson);
 
-       list.printAllEmployee();
+
+        list.printAllEmployee();
+
+        list.removeFromFront();
+        System.out.println("Removing the first element from the list ");
+        list.printAllEmployee();
+
+        System.out.println(list.isEmpty());
+
+        System.out.println(list.getSize());
     }
 }
