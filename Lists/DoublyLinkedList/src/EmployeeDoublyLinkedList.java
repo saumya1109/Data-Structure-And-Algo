@@ -24,9 +24,9 @@ public class EmployeeDoublyLinkedList {
     public void addToEnd(Employee employee) {
         //Creating a new node
         EmployeeDoublyNode node = new EmployeeDoublyNode(employee);
-        if(tail == null) {
-            head=node;
-        }else{
+        if (tail == null) {
+            head = node;
+        } else {
             tail.setNext(node);
             node.setPrev(tail);
         }
@@ -36,18 +36,18 @@ public class EmployeeDoublyLinkedList {
     }
 
     public EmployeeDoublyNode removeFromFront() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             return null;
         }
-        EmployeeDoublyNode  removedNode= head;
+        EmployeeDoublyNode removedNode = head;
 
-        if(head.getNext() == null) {
-            tail=null;
-        }else{
+        if (head.getNext() == null) {
+            tail = null;
+        } else {
             head.getNext().setPrev(null);
         }
 
-        head=head.getNext();
+        head = head.getNext();
         size--;
         removedNode.setNext(null);
         return removedNode;
@@ -57,26 +57,24 @@ public class EmployeeDoublyLinkedList {
     public EmployeeDoublyNode removeFromEnd() {
 
         //nothing to remove
-        if(isEmpty()) {
+        if (isEmpty()) {
             return null;
         }
-        EmployeeDoublyNode  removedNode= tail;
+        EmployeeDoublyNode removedNode = tail;
 
 
-        if(tail.getPrev() == null) {
+        if (tail.getPrev() == null) {
             //only one node in the list
-            head=null;
-        }else{
+            head = null;
+        } else {
             tail.getPrev().setNext(null);
         }
 
-        tail=tail.getPrev();
+        tail = tail.getPrev();
         size--;
         removedNode.setPrev(null);
         return removedNode;
     }
-
-
 
 
     public void printEmployees() {
@@ -94,11 +92,45 @@ public class EmployeeDoublyLinkedList {
         System.out.println("TAIL");
     }
 
+    public boolean addBefore(Employee newEmployee, Employee existingEmployee) {
+
+
+        if (head == null) {
+            return false;
+        }
+
+        //find the existing employee
+        EmployeeDoublyNode current = head;
+        while (current != null && !current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
+        }
+        if (current == null) {
+            return false;
+        }
+
+
+        EmployeeDoublyNode newEmployeeNode = new EmployeeDoublyNode(newEmployee);
+        newEmployeeNode.setPrev(current.getPrev());
+        newEmployeeNode.setNext(current);
+        current.getPrev().setNext(newEmployeeNode);
+
+        if (head == current) {
+            head = newEmployeeNode;
+        } else {
+            newEmployeeNode.getPrev().setNext(newEmployeeNode);
+        }
+
+        size++;
+
+
+        return true;
+    }
+
     public void getSize() {
         System.out.println(size);
     }
 
     public boolean isEmpty() {
-       return  head==null;
+        return head == null;
     }
 }

@@ -9,23 +9,42 @@ public class Main {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
 
         EmployeeDoublyLinkedList employeeDoublyLinkedList = new EmployeeDoublyLinkedList();
+
         employeeDoublyLinkedList.addToFront(janeJones);
         employeeDoublyLinkedList.addToFront(johnDoe);
         employeeDoublyLinkedList.addToFront(marySmith);
         employeeDoublyLinkedList.addToFront(mikeWilson);
 
-       // employeeDoublyLinkedList.printEmployees();
 
+        //print Employees
+        employeeDoublyLinkedList.printEmployees();
+
+        // Get Size
         employeeDoublyLinkedList.getSize();
 
+        //Making a new Employee
         Employee billEnd = new Employee("Bill", "End", 78);
+
+        //Making a new Employee
+        Employee zackNowark = new Employee("Zack", "Nowark", 1345);
+
+        // Adding bill to the end of the list
         employeeDoublyLinkedList.addToEnd(billEnd);
 
-     //   employeeDoublyLinkedList.printEmployees();
 
+        // Removing The first element from the list
         employeeDoublyLinkedList.removeFromFront();
+
+
+        // Removing from the End of the List
         employeeDoublyLinkedList.removeFromEnd();
 
+
+        //Adding an element before Mary Smith
+        employeeDoublyLinkedList.addBefore(zackNowark, marySmith);
+
         employeeDoublyLinkedList.printEmployees();
+
+
     }
 }
