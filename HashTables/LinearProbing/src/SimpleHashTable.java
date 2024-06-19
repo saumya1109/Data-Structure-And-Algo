@@ -1,10 +1,11 @@
 public class SimpleHashTable {
 
 
-    //We will have problem with just using  Employee array here, as we are just storing employees in the array, we don't know what key the employee is stored at
-    // So even if we solve the adding elements by implementing linear probing in put method,
-    // The get method doesn't know which index to look for
-    // The solution is to make a class that stores both the Key and the Value
+   /* We will have problem with just using  Employee array here, as we are just storing employees in the array, we don't know what key the employee is stored at
+    So even if we solve the adding elements by implementing linear probing in put method,
+    The get method doesn't know which index to look for
+    The solution is to make a class that stores both the Key and the Value
+    */
 
 
     // private Employee[] hashtable;
@@ -65,18 +66,25 @@ public class SimpleHashTable {
     public Employee remove(String key) {
         int hashedKey = findKey(key);
 
+        //if there is no employee present with the key ,there is nothing to remove
         if (hashedKey == -1) {
             return null;
         }
 
         Employee employee = hashtable[hashedKey].employee;
-       hashtable[hashedKey] = null;
-        StoredEmployee[] oldHashTable = hashtable;
+        hashtable[hashedKey] = null;
 
+
+        //Rehashing
+        //<Uncomment this to see the problem>
+
+        //oldHashTable
+        StoredEmployee[] oldHashTable = hashtable;
+        //New hashTable
         hashtable = new StoredEmployee[oldHashTable.length];
-        for(int i=0;i<oldHashTable.length;i++) {
-            if(oldHashTable[i] != null) {
-                put(oldHashTable[i].key,oldHashTable[i].employee);
+        for (int i = 0; i < oldHashTable.length; i++) {
+            if (oldHashTable[i] != null) {
+                put(oldHashTable[i].key, oldHashTable[i].employee);
             }
         }
 
@@ -103,11 +111,20 @@ public class SimpleHashTable {
         } else {
             hashedKey++;
         }
+        // We would be dropping out of this loop as soon as we hit the null position
+        //With linear probing we always put the element on the first available position of the position is filled already,
+        //hashedKey --5 (full) --> 6(full) --> 7(full) --> 8(placed)   {This is when we are putting the element}
+        // Now when we want to get the element back, as soon as it hits null, it should come out of the loop
+        // Because there should be no null values btw original hashedKey and probed HashedKey
+        // To solve this 1) re-hash while you're removing  2) Instead of null-ing out we can another field in StoredEmployee as isDeleted
 
-        while (hashedKey != stopIndex && hashtable[hashedKey] != null
-                && !hashtable[hashedKey].key.equals(key)) {
+        while (hashedKey != stopIndex &&
+                hashtable[hashedKey] != null &&
+                !hashtable[hashedKey].key.equals(key)) {
             hashedKey = (hashedKey + 1) % hashtable.length;
         }
+
+
         if (hashtable[hashedKey] != null && hashtable[hashedKey].key.equals(key)) {
             return hashedKey;
         } else {

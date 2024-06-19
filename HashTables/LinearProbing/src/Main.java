@@ -13,7 +13,7 @@ public class Main {
         hashTable.put("Doe", johnDoe);  // 3
         hashTable.put("Wilson", MikeWilson); //6
         hashTable.put("Smith", MarySmith); // 5 --> Linear Probing --> 6 --> 7
-        hashTable.printHashTable();
+       // hashTable.printHashTable();
 
         System.out.println("Retrieve key Wilson: "+ hashTable.get("Wilson"));
         System.out.println("Retrieve key Smith: "+ hashTable.get("Smith"));
