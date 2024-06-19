@@ -3,19 +3,24 @@ import java.util.ListIterator;
 
 public class ChainedHashTable {
 
+    // Chaining :Instead of storing the values into the array, each array position contains a linked list
+
+    //We need array of linkedlist
+
     private LinkedList<StoredEmployee>[] hashTable;
 
     public ChainedHashTable() {
         hashTable = new LinkedList[10];
 
         for (int i = 0; i < hashTable.length; i++) {
+            //[list1<Employee>, list2<Employee>, list3<Employee>, list4<Employee>]
             hashTable[i] = new LinkedList<StoredEmployee>();
         }
     }
 
     public void put(String key, Employee employee) {
-        int hashedKey = hashKey(key);
 
+        int hashedKey = hashKey(key);
         hashTable[hashedKey].add(new StoredEmployee(key, employee));
 
     }
@@ -23,6 +28,7 @@ public class ChainedHashTable {
     public Employee get(String key) {
         int hashedKey = hashKey(key);
 
+        //Search the linked list for the hashedkey.
         ListIterator<StoredEmployee> iterator = hashTable[hashedKey].listIterator();
         StoredEmployee employee = null;
         while (iterator.hasNext()) {
@@ -32,6 +38,7 @@ public class ChainedHashTable {
             }
 
         }
+        //No matches found
         return null;
 
     }
@@ -60,6 +67,9 @@ public class ChainedHashTable {
     }
 
     private int hashKey(String key) {
+
+
+       // return key.length() % hashTable.length;
         return Math.abs(key.hashCode() % hashTable.length);
     }
 
@@ -70,7 +80,7 @@ public class ChainedHashTable {
             if (hashTable[i].isEmpty()) {
                 System.out.println("Position " + i + ": empty");
             } else {
-                System.out.println("Position " + i + ": ");
+                System.out.print("Position " + i + ": ");
 
                 ListIterator<StoredEmployee> iterator = hashTable[i].listIterator();
                 while (iterator.hasNext()) {
