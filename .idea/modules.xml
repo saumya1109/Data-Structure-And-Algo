@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Lists/ArrayLists/ArrayLists.iml" filepath="$PROJECT_DIR$/Lists/ArrayLists/ArrayLists.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/BubbleSort/BubbleSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/BubbleSort/BubbleSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/BucketSort/BucketSort.iml" filepath="$PROJECT_DIR$/HashTables/BucketSort/BucketSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/CircularQueue/CircularQueue.iml" filepath="$PROJECT_DIR$/Queue/CircularQueue/CircularQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/Counting Sort/Counting Sort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/Counting Sort/Counting Sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataStructureAndAlgo.iml" filepath="$PROJECT_DIR$/.idea/DataStructureAndAlgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists/DoublyLinkedList/DoublyLinkedList.iml" filepath="$PROJECT_DIR$/Lists/DoublyLinkedList/DoublyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/HashTableChaining/HashTableChaining.iml" filepath="$PROJECT_DIR$/HashTables/HashTableChaining/HashTableChaining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/HashTableJDK/HashTableJDK.iml" filepath="$PROJECT_DIR$/HashTables/HashTableJDK/HashTableJDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/HashtablesArrayImplementation/HashtablesArrayImplementation.iml" filepath="$PROJECT_DIR$/HashTables/HashtablesArrayImplementation/HashtablesArrayImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/InsertionSort/InsertionSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/InsertionSort/InsertionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/InsertionSortWithRecursion/InsertionSortWithRecursion.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/InsertionSortWithRecursion/InsertionSortWithRecursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HashTables/LinearProbing/LinearProbing.iml" filepath="$PROJECT_DIR$/HashTables/LinearProbing/LinearProbing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists/LinkedListInJava/LinkedListInJava.iml" filepath="$PROJECT_DIR$/Lists/LinkedListInJava/LinkedListInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists/LinkedListSort/LinkedListSort.iml" filepath="$PROJECT_DIR$/Lists/LinkedListSort/LinkedListSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/MergeSort/MergeSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/MergeSort/MergeSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/QueueArrayImplementation/QueueArrayImplementation.iml" filepath="$PROJECT_DIR$/Queue/QueueArrayImplementation/QueueArrayImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/QueueJDKImplemetation/QueueJDKImplemetation.iml" filepath="$PROJECT_DIR$/Queue/QueueJDKImplemetation/QueueJDKImplemetation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/QuickSort/QuickSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/QuickSort/QuickSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/RadixSort/RadixSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/RadixSort/RadixSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/RadixSortForString/RadixSortForString.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/RadixSortForString/RadixSortForString.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/Recursion/Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/SelectionSort/SelectionSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/SelectionSort/SelectionSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/ShellSort/ShellSort.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/ShellSort/ShellSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists/SinglyLinkedList/SinglyLinkedList.iml" filepath="$PROJECT_DIR$/Lists/SinglyLinkedList/SinglyLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting Algorithms/SortingArraysJDK/SortingArraysJDK.iml" filepath="$PROJECT_DIR$/Sorting Algorithms/SortingArraysJDK/SortingArraysJDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stacks/StackArrayImplementation/StackArrayImplementation.iml" filepath="$PROJECT_DIR$/Stacks/StackArrayImplementation/StackArrayImplementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stacks/StackLinkedList/StackLinkedList.iml" filepath="$PROJECT_DIR$/Stacks/StackLinkedList/StackLinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lists/Vectors/Vectors.iml" filepath="$PROJECT_DIR$/Lists/Vectors/Vectors.iml" />
+    </modules>
+  </component>
+</project>
