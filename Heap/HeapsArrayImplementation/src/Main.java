@@ -17,11 +17,12 @@ public class Main {
         System.out.println("Peeking" + heap.peek());
 
         heap.pritnHeap();
+        heap.sort();
 
         //O(n)
        // heap.delete(1);
        // heap.delete(5);
-        heap.delete(0);
+        //heap.delete(0);
         heap.pritnHeap();
 
 

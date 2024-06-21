@@ -73,7 +73,7 @@ public class Heap {
     }
 
     public void pritnHeap() {
-        for(int i=0;i<size;i++) {
+        for (int i = 0; i < size; i++) {
             System.out.print(heap[i]);
             System.out.print(", ");
         }
@@ -81,11 +81,23 @@ public class Heap {
     }
 
     public int peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new IndexOutOfBoundsException("Heap is empty");
         }
         return heap[0];
     }
+
+    public void sort() {
+        int lastHeapIndex = size - 1;
+        for (int i = 0; i < lastHeapIndex; i++) {
+            int temp = heap[0];
+            heap[0] = heap[lastHeapIndex - i];
+            heap[lastHeapIndex - i] = temp;
+
+            fixHeapBelow(0, lastHeapIndex - i - 1);
+        }
+    }
+
     public boolean isFull() {
         return size == heap.length;
     }
@@ -101,7 +113,6 @@ public class Heap {
     public int getChild(int index, boolean left) {
         return 2 * index + (left ? 1 : 2);
     }
-
 
 
 }
