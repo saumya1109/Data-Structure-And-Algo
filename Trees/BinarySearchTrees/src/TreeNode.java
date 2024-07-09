@@ -57,6 +57,18 @@ public class TreeNode {
         }
     }
 
+    public void preOrder() {
+        System.out.print(data + ", ");
+
+        if (leftChild != null) {
+            leftChild.traverseInorder();
+        }
+        if (rightChild != null) {
+            rightChild.traverseInorder();
+        }
+
+    }
+
 
     public int getMin() {
 

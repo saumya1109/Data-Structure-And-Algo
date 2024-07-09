@@ -16,6 +16,12 @@ public class Tree {
         }
     }
 
+    public void preOrder(){
+        if (root != null) {
+            root.preOrder();
+        }
+    }
+
     public void delete(int value) {
         //passing the root of a subtree
         root = delete(root, value);
