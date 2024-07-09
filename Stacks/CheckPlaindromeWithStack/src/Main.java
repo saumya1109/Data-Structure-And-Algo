@@ -3,9 +3,9 @@ import java.util.Stack;
 public class Main {
     public static void main(String[] args) {
         String input1 = "I did,did I ?";
-        String input2 = "racecar";
+        String input2 = "Racecar";
         String input3 = "hello";
-        System.out.println(isPalindrome(input3));
+        System.out.println(isPalindrome(input2));
 
 
     }
@@ -13,7 +13,7 @@ public class Main {
     public static boolean isPalindrome(String s) {
         String originalString = s;
         String reversedString = "";
-        originalString = originalString.replaceAll("[\\p{Punct}\\s]", "");
+        originalString = originalString.replaceAll("[\\p{Punct}\\s]", "").toLowerCase();
         Stack<Character> stack = new Stack<>();
 
         for (int i = 0; i < originalString.length(); i++) {
